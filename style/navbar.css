@@ -1,0 +1,15 @@
+.main-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 20px;
+}
+.left-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  color: black;
+  text-decoration: none;
+}
