@@ -1,42 +1,48 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Maindiv, Rightdiv, RightLogoIcons } from "../style/navbarcss";
-import { Logodiv } from "../style/navbarcss";
-import { Input } from "../style/navbarcss";
-import { SearchIcon } from "../style/navbarcss";
-import likelogo from "../images/Vector.png";
-import cartlogo from "../images/Cart.png";
-import profilelogo from "../images/profile.png";
+import "./navbar.css";
+
 const Navbar = () => {
   return (
-    <div className="main-container">
-      <Maindiv>
-        <Logodiv>Funiro</Logodiv>
-        <Link to={"/home"}>
-          <div className="container">Home</div>
-        </Link>
-        <Link to={"/products"}>
-          <div className="container">Products</div>
-        </Link>
-        <Link to={"/rooms"}>
-          <div className="container">Rooms</div>
-        </Link>
-        <Link to={"/inspirations"}>
-          <div className="container">Inspirations</div>
-        </Link>
-        <Link to={"/contact"}>
-          <div className="container">Contact</div>
-        </Link>
-        <div className="left-container">
-          <SearchIcon />
+    <div className="navbar">
+      <div className="main-containers">
+        <div className="sidebar-header">
+          <span className="logo">🚀</span>
+          <span className="title">Admin Panel</span>
         </div>
-        <Input type="text" placeholder="search for minimalist chair"></Input>
-        <Rightdiv>
-          <RightLogoIcons src={likelogo} alt="Profile" />
-          <RightLogoIcons src={cartlogo} alt="Profile" />
-          <RightLogoIcons src={profilelogo} alt="Profile" />
-        </Rightdiv>
-      </Maindiv>
+
+        {/* Menyular */}
+        <Link to={"/dashboard"}>
+          <div className="container">
+            <span className="icon">🏠</span>Dashboard
+          </div>
+        </Link>
+        <Link to={"/markets"}>
+          <div className="container">
+            <span className="icon">🛒</span>Markets
+          </div>
+        </Link>
+        <Link to={"/restaurants"}>
+          <div className="container">
+            <span className="icon">🍽️</span>Restaurants
+          </div>
+        </Link>
+        <Link to={"/Products"}>
+          <div className="container">
+            <span className="icon">🛍️</span>Products
+          </div>
+        </Link>
+        <Link to={"/Users"}>
+          <div className="container">
+            <span className="icon">👥</span>Users
+          </div>
+        </Link>
+        <Link to={"/Orders"}>
+          <div className="container">
+            <span className="icon">📋</span>Orders
+          </div>
+        </Link>
+      </div>
     </div>
   );
 };

@@ -1,0 +1,103 @@
+.main-containers {
+  width: 300px;
+  min-height: 90vh;
+  background: #f9fafb;
+  border-radius: 5px; /* sidebar radiusli bo'ladi */
+  box-shadow: 0 4px 16px 0 rgba(44, 62, 80, 0.08);
+  padding: 35px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: sticky;
+  top: 24px;
+  left: 24px;
+  z-index: 10;
+  font-family: "Poppins", "Inter", "Segoe UI", sans-serif;
+  transition: box-shadow 0.3s ease;
+  flex-shrink: 0;
+  margin-bottom: 24px;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", "Inter", "Segoe UI", sans-serif;
+}
+
+.main-containers:hover {
+  box-shadow: 2px 0 16px rgba(0, 0, 0, 0.12);
+}
+
+.main-containers a {
+  text-decoration: none;
+  display: block;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: #344767;
+  font-size: 1.18rem;
+  font-weight: 500;
+  padding: 14px 28px;
+  border-radius: 18px;
+  margin: 0 18px 14px 18px; /* har bir element orasida pastdan bo‘sh joy */
+  cursor: pointer;
+  transition: background 0.22s cubic-bezier(0.25, 0.8, 0.25, 1),
+    color 0.22s cubic-bezier(0.25, 0.8, 0.25, 1),
+    box-shadow 0.22s cubic-bezier(0.25, 0.8, 0.25, 1);
+  background: #ffffffd5;
+  box-shadow: 0 2px 12px 0 rgba(44, 62, 80, 0.04);
+  position: relative;
+  user-select: none;
+}
+
+.container::before {
+  display: none; /* oldingi chap chiziqni olib tashlaymiz */
+}
+
+.container:hover,
+.container.active {
+  background: #6c63ff;
+  color: #fff;
+  box-shadow: 0 4px 16px 0 rgba(44, 62, 80, 0.1);
+  transform: translateY(-2px) scale(1.03);
+}
+
+.container .icon {
+  font-size: 1.4em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  transition: color 0.22s;
+}
+
+.container:hover .icon,
+.container.active .icon {
+  color: #fff;
+}
+
+/* Sidebar header (logo va nom) */
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 0 28px 32px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2d3748;
+}
+
+.sidebar-header .logo {
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar-header .title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
